@@ -14,16 +14,21 @@ class ContactForm extends Component {
   state = {
     ...INITIAL_STATE,
   };
+
   handleChange = ({ target }) => {
     const { name, number, value } = target;
+
     this.setState({ [name]: value });
     this.setState({ [number]: value });
   };
+
   handleSubmit = evt => {
     evt.preventDefault();
+    // console.log(this.props);
     this.props.onSubmit({ ...this.state });
     this.reset();
   };
+
   reset() {
     this.setState({ ...INITIAL_STATE });
   }
@@ -36,6 +41,7 @@ class ContactForm extends Component {
         <div className={style.phoneBook}>
           <label htmlFor={phoneBookID}>Name</label>
           <input
+            className={style.input}
             value={name}
             type="text"
             name="name"
@@ -46,15 +52,18 @@ class ContactForm extends Component {
           ></input>
           <label htmlFor={phoneNumberID}>Number</label>
           <input
+            className={style.input}
             value={number}
             type="tel"
-            name="name"
+            name="number"
             onChange={handleChange}
             id={phoneNumberID}
             placeholder="enter phone number"
             required
           ></input>
-          <button type="submit">Add contact</button>
+          <button className={style.phoneBtn} type="submit">
+            Add contact
+          </button>
         </div>
       </form>
     );

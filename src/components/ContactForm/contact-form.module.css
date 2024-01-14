@@ -1,3 +1,22 @@
 .phoneBook {
   display: flex;
 }
+
+.input {
+  border-radius: 25px;
+  padding: 3px 8px;
+  background: none;
+}
+
+::placeholder {
+  color: #2b2b2b;
+  font-weight: 600;
+}
+
+.phoneBtn {
+  color: aqua;
+  background-color: #739ae8;
+  border: none;
+  border-radius: 25px;
+  padding: 3px 8px;
+}

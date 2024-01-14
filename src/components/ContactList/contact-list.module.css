@@ -1,7 +1,22 @@
+body {
+  display: block;
+  background: #b4bbd8;
+  padding: 10px 40px;
+}
+
 .list {
   padding: 6px;
 }
 
 .contacts {
-  width: 2000px;
+  width: 760px;
+}
+
+.delete {
+  margin-left: 30px;
+  color: aqua;
+  background-color: #2c55a5;
+  border: none;
+  border-radius: 25px;
+  padding: 3px 8px;
 }
