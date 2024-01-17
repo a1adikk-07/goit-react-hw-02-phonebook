@@ -14,10 +14,11 @@ class App extends Component {
     const { contacts } = this.state;
     const normalizeName = name.toLowerCase();
     const dublicate = contacts.find(item => {
-      const normalizeCurrentName = item.name.toLowerCase();
-      return normalizeCurrentName === normalizeName;
+      // const normalizeCurrentName = item.name.toLowerCase();
+      return item.name.toLowerCase() === normalizeName;
+      // return normalizeCurrentName === normalizeName;
     });
-    return Boolean(dublicate);
+    // return Boolean(dublicate);
   }
   addContact = data => {
     if (this.isDublicate(data)) {
